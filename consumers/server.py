@@ -19,7 +19,7 @@ import topic_check
 
 logger = logging.getLogger(__name__)
 
-TOPIC_STATIONS = "com.udacity.ducnv104.project1.cta.stations"
+TOPIC_STATIONS = "com.udacity.ducnv104.project1.cta.stations.transformed"
 
 
 class MainHandler(tornado.web.RequestHandler):

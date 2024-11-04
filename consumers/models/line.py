@@ -8,7 +8,7 @@ from models import Station
 logger = logging.getLogger(__name__)
 
 
-TOPIC_STATION="com.udacity.ducnv104.project1.cta.stations"
+TOPIC_STATION="com.udacity.ducnv104.project1.cta.stations.transformed"
 TOPIC_ARRIVAL_TRAIN_PREFIX="com.udacity.ducnv104.project1.train_arrival"
 TOPIC_TURNSTILE="com.udacity.ducnv104.project1.turnstile"
 
