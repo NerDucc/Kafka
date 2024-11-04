@@ -69,7 +69,7 @@ class KafkaConsumer:
         logger.info("on_assign is incomplete - skipping")
         if self.offset_earliest == True:
             for partition in partitions:
-                partition.seek_to_beginning(partition)
+                partition.offset = confluent_kafka.OFFSET_BEGINNING
 
         logger.info("partitions assigned for %s", self.topic_name_pattern)
         consumer.assign(partitions)
@@ -92,7 +92,7 @@ class KafkaConsumer:
         #
         #
         is_msg_processed = 0
-        message = self.consume.poll(self.consume_timeout)
+        message = self.consumer.poll(self.consume_timeout)
         if message is None:
             print("No message received by consumer")
         elif message.error() is not None:
